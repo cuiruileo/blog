@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="Asia/Shanghai">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/data/images/favicon.gif">
+  <link rel="icon" type="image/png" sizes="32x32" href="/data/images/favicon.gif">
+  <link rel="icon" type="image/png" sizes="16x16" href="/data/images/favicon.gif">
+  <link rel="mask-icon" href="/data/images/favicon.gif" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="Front Matter使用说明">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Front-Matter Configuration">
+<meta property="og:url" content="http://blog.adachi.club/2020/04/23/front-matter_cn/index.html">
+<meta property="og:site_name" content="Leo&#39;s Blog">
+<meta property="og:description" content="Front Matter使用说明">
+<meta property="article:published_time" content="2020-04-23T04:05:59.000Z">
+<meta property="article:modified_time" content="2020-04-26T12:06:44.499Z">
+<meta property="article:author" content="Leo.C">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://blog.adachi.club/2020/04/23/front-matter_cn/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'Asia/Shanghai'
+  };
+</script>
+
+  <title>Front-Matter Configuration | Leo's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Leo's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Recording everyday's gowing up!</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="Asia/Shanghai">
+    <link itemprop="mainEntityOfPage" href="http://blog.adachi.club/2020/04/23/front-matter_cn/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/data/images/avatar.gif">
+      <meta itemprop="name" content="Leo.C">
+      <meta itemprop="description" content="Highly educated in hardware but newbie to software">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Front-Matter Configuration
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-04-23 12:05:59" itemprop="dateCreated datePublished" datetime="2020-04-23T12:05:59+08:00">2020-04-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-04-26 20:06:44" itemprop="dateModified" datetime="2020-04-26T20:06:44+08:00">2020-04-26</time>
+              </span>
+
+          
+            <div class="post-description">Front Matter使用说明</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <a id="more"></a>
+
+<p>可以使用的参数：</p>
+<ul>
+<li>文章<ul>
+<li>[Y] <a href="#layout">layout</a></li>
+<li>[Y] <a href="#title">title</a></li>
+<li>[Y] <a href="#data">data</a></li>
+<li>[Y] <a href="#updated">updated</a></li>
+<li>[Y] <a href="#comments">comments</a></li>
+<li>[Y] <a href="#tags">tags</a></li>
+<li>[Y] <a href="#categories">categories</a></li>
+<li>[-] <a href="#permalink">permalink</a></li>
+<li>[-] <a href="#keywords">keywords</a></li>
+<li>[Y] <a href="#type">type</a></li>
+<li>[Y] <a href="#url">url</a></li>
+<li>[Y] <a href="#author">author</a></li>
+<li>[Y] <a href="#email">email</a></li>
+<li>[Y] <a href="#description">description</a></li>
+<li>[Y] <a href="#hide">hide</a></li>
+<li>[Y] <a href="#reworad">reworad</a></li>
+<li>[Y] <a href="#katex">katex</a></li>
+</ul>
+</li>
+<li>页面<ul>
+<li>[Y] <a href="#layout">layout</a></li>
+<li>[Y] <a href="#title">title</a></li>
+<li>[Y] <a href="#data">data</a></li>
+<li>[Y] <a href="#updated">updated</a></li>
+<li>[Y] <a href="#comments">comments</a></li>
+<li>[-] <a href="#permalink">permalink</a></li>
+<li>[-] <a href="#keywords">keywords</a></li>
+<li>[Y] <a href="#type">type</a></li>
+<li>[Y] <a href="#icon">icon</a></li>
+<li>[Y] <a href="#reworad">reworad</a></li>
+<li>[Y] <a href="#katex">katex</a></li>
+</ul>
+</li>
+<li><a href="#页面定义参数">页面定义参数</a></li>
+</ul>
+<h2 id="Hexo参数"><a href="#Hexo参数" class="headerlink" title="Hexo参数"></a>Hexo参数</h2><h3 id="layout"><a href="#layout" class="headerlink" title="layout"></a>layout</h3><p>布局</p>
+<h3 id="title"><a href="#title" class="headerlink" title="title"></a>title</h3><p>Title    Filename (posts only)<br>title    标题    文章的文件名</p>
+<h3 id="data"><a href="#data" class="headerlink" title="data"></a>data</h3><p>Published date    File created date<br>date    建立日期    文件建立日期</p>
+<h3 id="updated"><a href="#updated" class="headerlink" title="updated"></a>updated</h3><p>Updated date    File updated date<br>updated    更新日期    文件更新日期</p>
+<h3 id="comments"><a href="#comments" class="headerlink" title="comments"></a>comments</h3><p>comments    Enables comment feature for the post    true<br>comments    开启文章的评论功能    true</p>
+<h3 id="tags"><a href="#tags" class="headerlink" title="tags"></a>tags</h3><p>tags    Tags (Not available for pages)<br>tags    标签（不适用于分页）    </p>
+<h3 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h3><p>categories    Categories (Not available for pages)<br>categories    分类（不适用于分页）    </p>
+<h3 id="permalink"><a href="#permalink" class="headerlink" title="permalink"></a>permalink</h3><p>permalink    Overrides the default permalink of the post<br>permalink    覆盖文章网址    </p>
+<h3 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h3><p>keywords    The keywords that only used in meta tag and Open Graph (not recommended)<br>keywords    仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）    </p>
+<h3 id="excerpt"><a href="#excerpt" class="headerlink" title="excerpt"></a>excerpt</h3><p>excerpt    Page excerpt in plain text. Use this plugin to format the text<br>excerpt: 摘要（不需要在 Front-matter 中设置，通过 <!-- more --> 截断实现，预览卡片与正文中均出现）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Yun主题参数"><a href="#Yun主题参数" class="headerlink" title="Yun主题参数"></a>Yun主题参数</h2><h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>= tags, categories, albums</p>
+<p>为文章设置 type 属性，即可将其转为其他类型卡片，你也可以自己在 yun.yml 设置你跳转不同链接专属的图标和颜色。</p>
+<p>type: tags<br>如果您尚未安装 hexo-generator-tag，请输入 npm install hexo-generator-tag。<br>type: categories<br>如果您尚未安装 hexo-generator-category，请输入 npm install hexo-generator-category。</p>
+<p>type: albums<br>albums:</p>
+<ul>
+<li>caption: 夕阳西下<br>url: /albums/sunset.html<br>cover: <a href="https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg" target="_blank" rel="noopener">https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg</a><br>desc: 我想起那天夕阳下的奔跑</li>
+</ul>
+<h3 id="url"><a href="#url" class="headerlink" title="url"></a>url</h3><h3 id="author"><a href="#author" class="headerlink" title="author"></a>author</h3><p>首页显示<br>post_card,post<br>author: 设置作者则会显示</p>
+<h3 id="email"><a href="#email" class="headerlink" title="email"></a>email</h3><p>首页显示<br>post_card,post<br>email: 自动根据邮箱获取 Gravatar 头像，仅在设置了author后才会激活</p>
+<h3 id="description"><a href="#description" class="headerlink" title="description"></a>description</h3><p>首页显示<br>description: 描述（只出现在预览卡片上，不出现在正文中）（默认使用 400 字重以表强调，略细于加粗字体）</p>
+<h3 id="hide"><a href="#hide" class="headerlink" title="hide"></a>hide</h3><h3 id="icon"><a href="#icon" class="headerlink" title="icon"></a>icon</h3><h3 id="reworad"><a href="#reworad" class="headerlink" title="reworad"></a>reworad</h3><h3 id="katex"><a href="#katex" class="headerlink" title="katex"></a>katex</h3><h2 id="页面定义参数"><a href="#页面定义参数" class="headerlink" title="页面定义参数"></a>页面定义参数</h2><h2 id="layout-1"><a href="#layout-1" class="headerlink" title="layout"></a>layout</h2><p>layout: gallery<br>photos:</p>
+<ul>
+<li>caption: 我<br>src: <a href="https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg" target="_blank" rel="noopener">https://interactive-examples.mdn.mozilla.net/media/examples/elephant-660-480.jpg</a><br>desc: 我想起那天夕阳下的奔跑</li>
+<li>caption: 想起<br>src: <a href="https://i.picsum.photos/id/198/510/300.jpg" target="_blank" rel="noopener">https://i.picsum.photos/id/198/510/300.jpg</a><br>desc: 那是我逝去的青春</li>
+</ul>
+<h2 id="url-1"><a href="#url-1" class="headerlink" title="url"></a>url</h2><p>跳转至 url 设置的链接</p>
+<h2 id="hide-1"><a href="#hide-1" class="headerlink" title="hide"></a>hide</h2><p>hide: true</p>
+<p>该文章仍然会被渲染，你自己可以直接访问链接进行查看。但不会被显示在展示的文章卡片中。</p>
+<p>题外话，这个功能是我当初应付备案临时加的。 我更改备案信息时，客服通知我首页不能用跳转其他页面链接的内容（有一个和文章混在一起直接跳转 bilibili 的卡片），所以我就加了这个功能临时隐藏掉了。 也许还挺实用的，你可以放一些只是自己看看，暂时还不打算发到主页显示的页面。</p>
+<h2 id="icon-1"><a href="#icon-1" class="headerlink" title="icon"></a>icon</h2><p>通用页面的配置。<br>icon: 页面标题前的图标</p>
+<p>example：<br>icon: icon-women-line</p>
+<h2 id="banner"><a href="#banner" class="headerlink" title="banner"></a>banner</h2><p>banner: <span title="大家都是我的天使！">排名不分先后</span></p>
+<h2 id="links"><a href="#links" class="headerlink" title="links"></a>links</h2><p>links:</p>
+<ul>
+<li>url: <a href="https://yunyoujun.cn" target="_blank" rel="noopener">https://yunyoujun.cn</a><br>avatar: <a href="https://cdn.jsdelivr.net/gh/YunYouJun/yunyoujun.github.io/images/avatar.jpg" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/YunYouJun/yunyoujun.github.io/images/avatar.jpg</a><br>name: 云游君<br>blog: 云游君的小站<br>desc: All at sea.<br>color: “#0078e7” # 代表色<br>email: # 非必须<br>placeholder: 还没想好说些什么 # 默认对友链的描述<br>tip: 友链加载中～如失败请刷新重试～</li>
+</ul>
+<p>links: <a href="https://cdn.jsdelivr.net/gh/YunYouJun/friends@gh-pages/links.json" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/YunYouJun/friends@gh-pages/links.json</a><br>random: true</p>
+<h2 id="girls"><a href="#girls" class="headerlink" title="girls"></a>girls</h2><p>girls:</p>
+<ul>
+<li>name: 名称<br>avatar: 头像图片链接<br>from: 出自什么作品<br>url: 人物百科链接<br>reason: 喜欢的理由</li>
+</ul>
+<hr>
+<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p>Layout定义:<br>404<br>links<br>girls<br>gallery</p>
+<p>index<br>page<br>post</p>
+<p>archive<br>category<br>tag</p>
+<table>
+<thead>
+<tr>
+<th align="center">值</th>
+<th align="center">内容</th>
+<th align="center">默认值</th>
+<th align="center">可选值</th>
+<th align="center">适用位置</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">layout</td>
+<td align="center">页面布局</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">页面</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">title</td>
+<td align="center">标题</td>
+<td align="center">自动生成</td>
+<td align="center">-</td>
+<td align="center">文章/页面/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">date</td>
+<td align="center">建立时间</td>
+<td align="center">自动生成</td>
+<td align="center">-</td>
+<td align="center">文章/页面/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">updated</td>
+<td align="center">更新时间</td>
+<td align="center">可自动生成</td>
+<td align="center">-</td>
+<td align="center">文章/页面/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">comments</td>
+<td align="center">是否开启评论</td>
+<td align="center">true</td>
+<td align="center">true / false</td>
+<td align="center">文章/页面</td>
+<td>默认不设置及跟随主题配置</td>
+</tr>
+<tr>
+<td align="center">tags</td>
+<td align="center">标签</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">文章/页面/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">categories</td>
+<td align="center">分类</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">文章/页面/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">permalink</td>
+<td align="center">连接</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td>设定固定链接，没啥特殊要求别花时间研究它了</td>
+</tr>
+<tr>
+<td align="center">keywords</td>
+<td align="center">关键词</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td>仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">author</td>
+<td align="center">作者</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">文章/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">email</td>
+<td align="center">作者头像</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">文章/摘要</td>
+<td>仅在有 author 值时生效</td>
+</tr>
+<tr>
+<td align="center">description</td>
+<td align="center">描述</td>
+<td align="center">-</td>
+<td align="center">-</td>
+<td align="center">文章/摘要</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">页面类别</td>
+<td align="center">-</td>
+<td align="center">categories / tags / albums</td>
+<td align="center">页面</td>
+<td></td>
+</tr>
+<tr>
+<td align="center">url</td>
+<td align="center">连接</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">文章/摘要</td>
+<td>有type，文章无内容时，摘要直达链接</td>
+</tr>
+<tr>
+<td align="center">hide</td>
+<td align="center">隐藏</td>
+<td align="center">false</td>
+<td align="center">true / false</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">icon</td>
+<td align="center">图标</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">reward</td>
+<td align="center">打赏</td>
+<td align="center">true</td>
+<td align="center">true / false</td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">katex</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">banner</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">links</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+<tr>
+<td align="center">girls</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td></td>
+</tr>
+</tbody></table>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/22/mod-polarbear/" rel="prev" title="Polarbear Modification">
+      <i class="fa fa-chevron-left"></i> Polarbear Modification
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/23/front-matter/" rel="next" title="Front-Matter Configuration">
+      Front-Matter Configuration <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo参数"><span class="nav-number">1.</span> <span class="nav-text">Hexo参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#layout"><span class="nav-number">1.1.</span> <span class="nav-text">layout</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#title"><span class="nav-number">1.2.</span> <span class="nav-text">title</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data"><span class="nav-number">1.3.</span> <span class="nav-text">data</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#updated"><span class="nav-number">1.4.</span> <span class="nav-text">updated</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#comments"><span class="nav-number">1.5.</span> <span class="nav-text">comments</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#tags"><span class="nav-number">1.6.</span> <span class="nav-text">tags</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#categories"><span class="nav-number">1.7.</span> <span class="nav-text">categories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#permalink"><span class="nav-number">1.8.</span> <span class="nav-text">permalink</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#keywords"><span class="nav-number">1.9.</span> <span class="nav-text">keywords</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#excerpt"><span class="nav-number">1.10.</span> <span class="nav-text">excerpt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Yun主题参数"><span class="nav-number">2.</span> <span class="nav-text">Yun主题参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#type"><span class="nav-number">2.1.</span> <span class="nav-text">type</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#url"><span class="nav-number">2.2.</span> <span class="nav-text">url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#author"><span class="nav-number">2.3.</span> <span class="nav-text">author</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#email"><span class="nav-number">2.4.</span> <span class="nav-text">email</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#description"><span class="nav-number">2.5.</span> <span class="nav-text">description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hide"><span class="nav-number">2.6.</span> <span class="nav-text">hide</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#icon"><span class="nav-number">2.7.</span> <span class="nav-text">icon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#reworad"><span class="nav-number">2.8.</span> <span class="nav-text">reworad</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#katex"><span class="nav-number">2.9.</span> <span class="nav-text">katex</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#页面定义参数"><span class="nav-number">3.</span> <span class="nav-text">页面定义参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#layout-1"><span class="nav-number">4.</span> <span class="nav-text">layout</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url-1"><span class="nav-number">5.</span> <span class="nav-text">url</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hide-1"><span class="nav-number">6.</span> <span class="nav-text">hide</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#icon-1"><span class="nav-number">7.</span> <span class="nav-text">icon</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#banner"><span class="nav-number">8.</span> <span class="nav-text">banner</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#links"><span class="nav-number">9.</span> <span class="nav-text">links</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#girls"><span class="nav-number">10.</span> <span class="nav-text">girls</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文章"><span class="nav-number">11.</span> <span class="nav-text">文章</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Leo.C"
+      src="/data/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Leo.C</p>
+  <div class="site-description" itemprop="description">Highly educated in hardware but newbie to software</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP#88888888 </a>
+  </div>
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-cloud"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Leo.C</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
