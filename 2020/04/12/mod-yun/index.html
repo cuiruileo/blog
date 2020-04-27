@@ -320,7 +320,7 @@
 <h4 id="搜索引擎"><a href="#搜索引擎" class="headerlink" title="搜索引擎"></a>搜索引擎</h4><blockquote>
 <p>npm install hexo-generator-search</p>
 </blockquote>
-<p>主题配置</p>
+<p>主题配置参数</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h4><blockquote>
@@ -329,24 +329,20 @@
 <h4 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h4><blockquote>
 <p>npm install hexo-prism-plugin</p>
 </blockquote>
-<p>根目录配置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">prism_plugin:</span></span><br><span class="line">  <span class="attr">mode:</span> <span class="string">preprocess</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">default</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># custom_css: "path/to/your/custom.css"</span></span><br></pre></td></tr></table></figure>
-
-<p>主题配置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>根目录配置参数</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">prism_plugin:</span></span><br><span class="line">  <span class="attr">mode:</span> <span class="string">preprocess</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">default</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">false</span></span><br><span class="line">  <span class="comment"># custom_css: "path/to/your/custom.css"</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="字数统计"><a href="#字数统计" class="headerlink" title="字数统计"></a>字数统计</h4><blockquote>
 <p>npm install hexo-symbols-count-time</p>
 </blockquote>
-<p>根目录配置</p>
+<p>根目录配置参数</p>
 <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
-<p>主题配置</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">item_text_post:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">item_text_total:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">250</span></span><br></pre></td></tr></table></figure>
+<p>主题配置参数</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">awl:</span> <span class="number">2</span></span><br><span class="line">  <span class="attr">wpm:</span> <span class="number">250</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="站点统计"><a href="#站点统计" class="headerlink" title="站点统计"></a>站点统计</h4><blockquote>
-<p>npm install hexo-generator-sitemap</p>
-<p>npm install hexo-generator-baidu-sitemap</p>
+<p>npm install hexo-generator-sitemap hexo-generator-baidu-sitemap</p>
 </blockquote>
 <h3 id="配置原则"><a href="#配置原则" class="headerlink" title="配置原则"></a>配置原则</h3><p>配置文件采用约定先于配置原则，即 <code>root/source/_data/yun.yml</code> 先于 <code>themes/yun/_config.yml</code> 。</p>
 <p>出于升级及备份方便考虑，自定义素材均保存于 <code>themes/yun/source/data/</code> 。</p>
@@ -676,7 +672,7 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">34k</span>
+    <span title="Symbols count total">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
