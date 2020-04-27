@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="本站由Hexo驱动，主题基于Yun。 引用及参照：  https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;index.html https:&#x2F;&#x2F;github.com&#x2F;YunYouJun&#x2F;hexo-theme-yun https:&#x2F;&#x2F;yun.yunyoujun.cn&#x2F;guide&#x2F;">
@@ -76,6 +76,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="Leo's Blog" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -104,6 +105,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -118,14 +120,9 @@
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
 
   </li>
-        <li class="menu-item menu-item-about">
+        <li class="menu-item menu-item-archives">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">8</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
@@ -133,40 +130,54 @@
     <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">1</span></a>
 
   </li>
-        <li class="menu-item menu-item-archives">
+        <li class="menu-item menu-item-tags">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">7</span></a>
-
-  </li>
-        <li class="menu-item menu-item-schedule">
-
-    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>Schedule</a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
 
   </li>
-        <li class="menu-item menu-item-sitemap">
+        <li class="menu-item menu-item-about">
 
-    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>Sitemap</a>
-
-  </li>
-        <li class="menu-item menu-item-commonweal">
-
-    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>Commonweal 404</a>
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -222,8 +233,50 @@
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
             </span>
+            <span class="post-meta-item">
+              
+                <span class="post-meta-item-icon"><i class="fa fa-tag"></i></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
+                </span>
+            </span>
 
           
+            <span id="/2020/04/12/mod-yun/" class="post-meta-item leancloud_visitors" data-flag-title="安达充站配置" title="Views">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">Views: </span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine: </span>
+    
+    <a title="valine" href="/2020/04/12/mod-yun/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/12/mod-yun/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+            <span class="post-meta-item" title="Symbols count in article">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">Symbols count in article: </span>
+              <span>10k</span>
+            </span>
+            <span class="post-meta-item" title="Reading time">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">Reading time &asymp;</span>
+              <span>9 mins.</span>
+            </span>
 
         </div>
       </header>
@@ -423,11 +476,23 @@
     
     
     
+        
 
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/hexo/" rel="tag"># hexo</a>
-          </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>Post author:  </strong>Leo.C
+  </li>
+  <li class="post-copyright-link">
+    <strong>Post link: </strong>
+    <a href="http://blog.adachi.club/2020/04/12/mod-yun/" title="安达充站配置">http://blog.adachi.club/2020/04/12/mod-yun/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
 
         
 
@@ -454,6 +519,7 @@
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -500,7 +566,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置"><span class="nav-number">1.</span> <span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#升级"><span class="nav-number">1.2.</span> <span class="nav-text">升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">1.3.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染器"><span class="nav-number">1.3.1.</span> <span class="nav-text">渲染器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类标签等系统插件"><span class="nav-number">1.3.2.</span> <span class="nav-text">分类标签等系统插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云"><span class="nav-number">1.3.3.</span> <span class="nav-text">标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎"><span class="nav-number">1.3.4.</span> <span class="nav-text">搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSS"><span class="nav-number">1.3.5.</span> <span class="nav-text">RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码高亮"><span class="nav-number">1.3.6.</span> <span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字数统计"><span class="nav-number">1.3.7.</span> <span class="nav-text">字数统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点统计"><span class="nav-number">1.3.8.</span> <span class="nav-text">站点统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置原则"><span class="nav-number">1.4.</span> <span class="nav-text">配置原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面头部"><span class="nav-number">1.5.</span> <span class="nav-text">页面头部</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-number">1.5.1.</span> <span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-number">1.5.2.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-number">1.5.3.</span> <span class="nav-text">标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相册"><span class="nav-number">1.5.4.</span> <span class="nav-text">相册</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-number">1.5.5.</span> <span class="nav-text">关于</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于站点"><span class="nav-number">1.5.6.</span> <span class="nav-text">关于站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-number">1.5.7.</span> <span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友情链接"><span class="nav-number">1.5.8.</span> <span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#女孩子们"><span class="nav-number">1.5.9.</span> <span class="nav-text">女孩子们</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题结构"><span class="nav-number">2.</span> <span class="nav-text">主题结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题修改"><span class="nav-number">3.</span> <span class="nav-text">主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布局"><span class="nav-number">3.1.</span> <span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-post-post-meta-pug"><span class="nav-number">3.1.1.</span> <span class="nav-text">_partial&#x2F;post&#x2F;post-meta.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-footer-pug"><span class="nav-number">3.1.2.</span> <span class="nav-text">_partial&#x2F;footer.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-layout-pug"><span class="nav-number">3.1.3.</span> <span class="nav-text">_partial&#x2F;layout.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-recent-posts-pug"><span class="nav-number">3.1.4.</span> <span class="nav-text">_partial&#x2F;recent-posts.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-sidebar-pug"><span class="nav-number">3.1.5.</span> <span class="nav-text">_partial&#x2F;sidebar.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#archive-pug"><span class="nav-number">3.1.6.</span> <span class="nav-text">archive.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#category-pug"><span class="nav-number">3.1.7.</span> <span class="nav-text">category.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gallery-pug"><span class="nav-number">3.1.8.</span> <span class="nav-text">gallery.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#page-pug"><span class="nav-number">3.1.9.</span> <span class="nav-text">page.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-pug"><span class="nav-number">3.1.10.</span> <span class="nav-text">tag.pug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-number">3.2.</span> <span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-markdown-styl"><span class="nav-number">3.2.1.</span> <span class="nav-text">_components&#x2F;post&#x2F;post-markdown.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-card-styl"><span class="nav-number">3.2.2.</span> <span class="nav-text">_components&#x2F;post&#x2F;post-card.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-nav-styl"><span class="nav-number">3.2.3.</span> <span class="nav-text">_components&#x2F;post&#x2F;post-nav.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-sidebar-sidebar-styl"><span class="nav-number">3.2.4.</span> <span class="nav-text">_components&#x2F;sidebar&#x2F;sidebar.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#compents-sidebar-site-overview-styl"><span class="nav-number">3.2.5.</span> <span class="nav-text">_compents&#x2F;sidebar&#x2F;site-overview.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-index-styl"><span class="nav-number">3.2.6.</span> <span class="nav-text">_global&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-page-styl"><span class="nav-number">3.2.7.</span> <span class="nav-text">_layout&#x2F;page.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-post-styl"><span class="nav-number">3.2.8.</span> <span class="nav-text">_layout&#x2F;post.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-search-index-styl"><span class="nav-number">3.2.9.</span> <span class="nav-text">_widget&#x2F;search&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-comment-styl"><span class="nav-number">3.2.10.</span> <span class="nav-text">_widget&#x2F;comment.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-notice-styl"><span class="nav-number">3.2.11.</span> <span class="nav-text">_widget&#x2F;notice.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-say-styl"><span class="nav-number">3.2.12.</span> <span class="nav-text">_widget&#x2F;say.styl</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言"><span class="nav-number">3.3.</span> <span class="nav-text">语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题新增功能"><span class="nav-number">4.</span> <span class="nav-text">主题新增功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#头像旋转功能"><span class="nav-number">4.1.</span> <span class="nav-text">头像旋转功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶部载入进度条"><span class="nav-number">4.2.</span> <span class="nav-text">顶部载入进度条</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置"><span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#升级"><span class="nav-text">升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染器"><span class="nav-text">渲染器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类标签等系统插件"><span class="nav-text">分类标签等系统插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云"><span class="nav-text">标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎"><span class="nav-text">搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSS"><span class="nav-text">RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码高亮"><span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字数统计"><span class="nav-text">字数统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点统计"><span class="nav-text">站点统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置原则"><span class="nav-text">配置原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面头部"><span class="nav-text">页面头部</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-text">标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相册"><span class="nav-text">相册</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-text">关于</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于站点"><span class="nav-text">关于站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友情链接"><span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#女孩子们"><span class="nav-text">女孩子们</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题结构"><span class="nav-text">主题结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题修改"><span class="nav-text">主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布局"><span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-post-post-meta-pug"><span class="nav-text">_partial&#x2F;post&#x2F;post-meta.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-footer-pug"><span class="nav-text">_partial&#x2F;footer.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-layout-pug"><span class="nav-text">_partial&#x2F;layout.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-recent-posts-pug"><span class="nav-text">_partial&#x2F;recent-posts.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-sidebar-pug"><span class="nav-text">_partial&#x2F;sidebar.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#archive-pug"><span class="nav-text">archive.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#category-pug"><span class="nav-text">category.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gallery-pug"><span class="nav-text">gallery.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#page-pug"><span class="nav-text">page.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-pug"><span class="nav-text">tag.pug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-markdown-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-markdown.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-card-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-card.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-nav-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-nav.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-sidebar-sidebar-styl"><span class="nav-text">_components&#x2F;sidebar&#x2F;sidebar.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#compents-sidebar-site-overview-styl"><span class="nav-text">_compents&#x2F;sidebar&#x2F;site-overview.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-index-styl"><span class="nav-text">_global&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-page-styl"><span class="nav-text">_layout&#x2F;page.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-post-styl"><span class="nav-text">_layout&#x2F;post.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-search-index-styl"><span class="nav-text">_widget&#x2F;search&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-comment-styl"><span class="nav-text">_widget&#x2F;comment.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-notice-styl"><span class="nav-text">_widget&#x2F;notice.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-say-styl"><span class="nav-text">_widget&#x2F;say.styl</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#语言"><span class="nav-text">语言</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题新增功能"><span class="nav-text">主题新增功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#头像旋转功能"><span class="nav-text">头像旋转功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#顶部载入进度条"><span class="nav-text">顶部载入进度条</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -516,7 +582,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
@@ -534,10 +600,47 @@
       </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/baidusitemap.xml" title="sitemap → &#x2F;baidusitemap.xml"><i class="fa fa-sitemap fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://yoursite.com/" title="http:&#x2F;&#x2F;yoursite.com" rel="noopener" target="_blank">Title</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://www.test.com/" title="http:&#x2F;&#x2F;www.test.com" rel="noopener" target="_blank">T2T</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
 
     </div>
   </aside>
@@ -552,8 +655,6 @@
         
 
         
-  <div class="beian"><a href="http://www.beian.miit.gov.cn/" rel="noopener" target="_blank">京ICP#88888888 </a>
-  </div>
 
 <div class="copyright">
   
@@ -562,12 +663,44 @@
   <span class="with-love">
     <i class="fa fa-cloud"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Leo.C</span>
+  <span class="author" itemprop="copyrightHolder">All Rights Reserved.</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">Symbols count total: </span>
+    <span title="Symbols count total">30k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">Reading time total &asymp;</span>
+    <span title="Reading time total">27 mins.</span>
 </div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
   </div>
 
         
+<div class="busuanzi-count">
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
 
 
 
@@ -582,6 +715,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
@@ -595,6 +730,65 @@
 
 <script src="/js/next-boot.js"></script>
 
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
 
 
 
@@ -603,6 +797,8 @@
 
 
 
+  
+<script src="/js/local-search.js"></script>
 
 
 
@@ -614,9 +810,42 @@
 
 
 
+
+
+    <div id="pjax">
   
 
   
 
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : true,
+      notify     : false,
+      appId      : 'QtdE5PNHKovxnWvgY4gwhmRQ-gzGzoHsz',
+      appKey     : 'PCHPi54KSEH775QJBs1P5io3',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : true,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+    </div>
 </body>
 </html>
