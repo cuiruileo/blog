@@ -100,7 +100,24 @@
       <h1 class="site-title">Leo's Blog</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
-      <p class="site-subtitle" itemprop="description">Recording everyday's gowing up!</p>
+      <p class="site-subtitle" itemprop="description" id="hitokoto">:D 获取中...</p>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto;
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+
   </div>
 
   <div class="site-nav-right">
@@ -656,7 +673,7 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Leo.C"
       src="https://cdn.jsdelivr.net/gh/cuiruileo/cdn/images/avatar.png">
-  <p class="site-author-name" itemprop="name">Leo.C</p>
+  <p class="site-author-name" itemprop="name"><a href='/about/'>Leo.C</a></p>
   <div class="site-description" itemprop="description">Highly educated in hardware<br>but newbie to software</div>
 </div>
 <div class="site-state-wrap motion-element">
@@ -755,13 +772,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">34k</span>
+    <span title="Symbols count total">36k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">31 mins.</span>
+    <span title="Reading time total">32 mins.</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
