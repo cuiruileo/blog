@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Asia/Shanghai">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
@@ -26,6 +26,7 @@
 <meta property="og:url" content="http://blog.adachi.club/archives/index.html">
 <meta property="og:site_name" content="Leo&#39;s Blog">
 <meta property="og:description" content="Highly educated in hardwarebut newbie to software">
+<meta property="og:locale" content="en_US">
 <meta property="article:author" content="Leo.C">
 <meta name="twitter:card" content="summary">
 
@@ -38,7 +39,7 @@
     sidebar: "",
     isHome : false,
     isPost : false,
-    lang   : 'Asia/Shanghai'
+    lang   : 'en'
   };
 </script>
 
@@ -130,6 +131,11 @@
         <li class="menu-item menu-item-tags">
 
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
+
+  </li>
+        <li class="menu-item menu-item-board">
+
+    <a href="/board/" rel="section"><i class="fa fa-comment fa-fw"></i>Guestbook</a>
 
   </li>
         <li class="menu-item menu-item-about">
@@ -524,13 +530,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">33k</span>
+    <span title="Symbols count total">35k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">30 mins.</span>
+    <span title="Reading time total">32 mins.</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
@@ -686,7 +692,7 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
       meta       : guest,
       pageSize   : '10' || 10,
       visitor    : false,
-      lang       : '' || 'zh-cn',
+      lang       : 'en' || 'zh-cn',
       path       : location.pathname,
       recordIP   : false,
       serverURLs : ''
