@@ -1225,7 +1225,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #9679b8;
+  background: #ff167c;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2727,37 +2727,43 @@ ul.breadcrumb li + li:last-child {
     margin: 8px 0 0;
   }
 }
-body {
-  background-image: url("https://cdn.jsdelivr.net/gh/cuiruileo/cdn/images/background.jpg");
-  height: 100%;
-  width: 100%;
-  background-repeat: repeat-x;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-}
 .header {
   max-width: 1450px;
 }
 .main-inner {
   max-width: 1450px;
 }
-.content-wrap {
-  opacity: 0.85;
+body {
+  background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  background-size: cover;
 }
-.sidebar {
-  opacity: 0.85;
+.content-wrap {
+  opacity: 0.8;
 }
 .header-inner {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.8);
+}
+.sidebar {
+  opacity: 0.8;
 }
 .popup {
-  opacity: 0.85;
+  opacity: 0.95;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("https://blog.bill.moe/images/background-dark.jpg");
+  }
+  .header-inner {
+    background: rgba(51,51,51,0.8);
+  }
 }
 .footer {
-  color: dim-white;
+  color: #808080;
 }
 .theme-link {
-  color: #a9a9a9;
+  color: #696969;
 }
 .post-body>p:first-child::first-letter {
   float: left;
@@ -2768,12 +2774,4 @@ body {
   line-height: 28px;
   font-style: normal;
   font-weight: 400;
-}
-@media (max-width: 767px) {
-  .post-body>p:first-child::first-letter {
-    margin-top: 10px;
-    margin-right: 4px;
-    font-size: 26px;
-    line-height: 20px;
-  }
 }
