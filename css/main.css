@@ -1225,7 +1225,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff167c;
+  background: #9486ac;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2740,24 +2740,32 @@ body {
   background-size: cover;
 }
 .content-wrap {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .header-inner {
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
 }
 .sidebar {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .popup {
   opacity: 0.95;
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-image: url("https://blog.bill.moe/images/background-dark.jpg");
+    background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
   }
   .header-inner {
-    background: rgba(51,51,51,0.8);
+    background: rgba(51,51,51,0.9);
   }
+}
+.posts-collapse .collection-year:hover::before {
+  background: #222;
+}
+.posts-collapse .collection-header a,
+.posts-collapse .collection-header span.exturl {
+  border-bottom: none;
+  color: var(--link-color);
 }
 .footer {
   color: #808080;
