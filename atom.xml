@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Leo.C的博客</title>
+  <title>Leo&#39;s Repository</title>
   
-  <subtitle>Recording everyday&#39;s gowing up!</subtitle>
+  <subtitle>~ Recording daily growing up ~</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.adachi.club/"/>
