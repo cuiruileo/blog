@@ -2,18 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>http://blog.adachi.club/2020/04/26/mod-next/</loc>
-    <lastmod>2020-05-02</lastmod>
+    <lastmod>2020-05-04</lastmod>
   </url>  <url>
-    <loc>http://blog.adachi.club/2019/12/22/mod-polarbear/</loc>
-    <lastmod>2020-05-01</lastmod>
+    <loc>http://blog.adachi.club/2019/06/23/test2/</loc>
+    <lastmod>2020-05-04</lastmod>
   </url>  <url>
-    <loc>http://blog.adachi.club/2019/04/21/hexo-plugins-gdemo/</loc>
-    <lastmod>2020-05-01</lastmod>
-  </url>  <url>
-    <loc>http://blog.adachi.club/2018/04/23/front-matter/</loc>
-    <lastmod>2020-05-01</lastmod>
+    <loc>http://blog.adachi.club/2019/01/23/test1/</loc>
+    <lastmod>2020-05-04</lastmod>
   </url>  <url>
     <loc>http://blog.adachi.club/2018/04/23/front-matter_cn/</loc>
+    <lastmod>2020-05-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.adachi.club/2018/04/23/front-matter/</loc>
+    <lastmod>2020-05-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.adachi.club/2019/01/23/cousu/</loc>
+    <lastmod>2020-05-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.adachi.club/2019/01/23/coushu/</loc>
+    <lastmod>2020-05-04</lastmod>
+  </url>  <url>
+    <loc>http://blog.adachi.club/2019/04/21/hexo-plugins-gdemo/</loc>
+    <lastmod>2020-05-03</lastmod>
+  </url>  <url>
+    <loc>http://blog.adachi.club/2019/12/22/mod-polarbear/</loc>
     <lastmod>2020-05-01</lastmod>
   </url>  <url>
     <loc>http://blog.adachi.club/2020/04/12/mod-yun/</loc>
