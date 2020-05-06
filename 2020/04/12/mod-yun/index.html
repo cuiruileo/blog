@@ -14,6 +14,8 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -246,7 +248,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>9.8k</span>
+              <span>9.9k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
@@ -418,7 +420,7 @@
 
 <h4 id="partial-footer-pug"><a href="#partial-footer-pug" class="headerlink" title="_partial/footer.pug"></a>_partial/footer.pug</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 作者增加关于连接</span><br><span class="line"><span class="deletion">- span.author  #&#123;config.author&#125;</span></span><br><span class="line"><span class="addition">+ span.author</span></span><br><span class="line"><span class="addition">+   a(href=url_for('about/'))</span></span><br><span class="line"><span class="addition">+     | #&#123;config.author&#125;</span></span><br><span class="line"></span><br><span class="line"># 页脚布局</span><br><span class="line"># if theme.footer.powered.enable 整段缩进</span><br><span class="line"><span class="deletion">- .powered</span></span><br><span class="line"><span class="addition">+ span.footer-separator |</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="partial-layout-pug"><a href="#partial-layout-pug" class="headerlink" title="_partial/layout.pug"></a>_partial/layout.pug</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 所有页面都显示边栏按钮</span><br><span class="line"><span class="deletion">-   body(class= is_home() ? 'is-home' : '')</span></span><br><span class="line"><span class="addition">+   body(class= 'is-home' : '')</span></span><br></pre></td></tr></table></figure>
+<h4 id="partial-layout-pug"><a href="#partial-layout-pug" class="headerlink" title="_partial/layout.pug"></a>_partial/layout.pug</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 所有页面都显示边栏按钮</span><br><span class="line"><span class="deletion">-   body(class= is_home() ? 'is-home' : '')</span></span><br><span class="line"><span class="addition">+   body(class='is-home')</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="partial-recent-posts-pug"><a href="#partial-recent-posts-pug" class="headerlink" title="_partial/recent-posts.pug"></a>_partial/recent-posts.pug</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 首页卡片显示全文内容</span><br><span class="line"># 在.post-card-excerpt.post-markdown!=post.excerpt之后加入</span><br><span class="line"><span class="addition">+ if !post.description &amp;&amp; !post.excerpt</span></span><br><span class="line"><span class="addition">+   .post-card-excerpt.post-markdown!=post.content</span></span><br></pre></td></tr></table></figure>
 
@@ -454,7 +456,7 @@
 
 <h4 id="widget-search-index-styl"><a href="#widget-search-index-styl" class="headerlink" title="_widget/search/index.styl"></a>_widget/search/index.styl</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># 搜索背景图片位置与透明</span><br><span class="line"># .search-popup &#123;</span><br><span class="line"><span class="deletion">- background-position: center;</span></span><br><span class="line"><span class="addition">+ background-position: bottom center;</span></span><br><span class="line"><span class="addition">+ background-color: rgba(white, $post-card-opacity);</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="widget-comment-styl"><a href="#widget-comment-styl" class="headerlink" title="_widget/comment.styl"></a>_widget/comment.styl</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># COMMENT宽度</span><br><span class="line"># #comment &#123;</span><br><span class="line"><span class="deletion">- margin: 0 1rem;</span></span><br><span class="line"><span class="addition">+ position: relative;</span></span><br><span class="line"><span class="addition">+ max-width: 1000px;</span></span><br><span class="line"><span class="addition">+ margin: 0 auto;</span></span><br><span class="line"></span><br><span class="line"># COMMENT透明度</span><br><span class="line"><span class="deletion">- background-color: white;</span></span><br><span class="line"><span class="addition">+ background-color: rgba(white, $post-card-opacity);</span></span><br><span class="line"><span class="addition">+ box-shadow: 0 1px 8px rgba(white, 0.1);</span></span><br></pre></td></tr></table></figure>
+<h4 id="widget-comment-styl"><a href="#widget-comment-styl" class="headerlink" title="_widget/comment.styl"></a>_widget/comment.styl</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># COMMENT宽度</span><br><span class="line"># #comment &#123;</span><br><span class="line"><span class="deletion">- margin: 0 1rem;</span></span><br><span class="line"><span class="addition">+ position: relative;</span></span><br><span class="line"><span class="addition">+ max-width: 1000px;</span></span><br><span class="line"><span class="addition">+ margin: 0 auto;</span></span><br><span class="line"></span><br><span class="line"><span class="addition">+ .comment-container &#123;</span></span><br><span class="line"><span class="addition">+   padding: 0 4rem;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+   +tablet() &#123;</span></span><br><span class="line"><span class="addition">+     padding: 0;</span></span><br><span class="line"><span class="addition">+   &#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+   +mobile() &#123;</span></span><br><span class="line"><span class="addition">+     padding: 0;</span></span><br><span class="line"><span class="addition">+   &#125;</span></span><br><span class="line"><span class="addition">+ &#125;</span></span><br><span class="line"></span><br><span class="line"># COMMENT透明度</span><br><span class="line"><span class="deletion">- background-color: white;</span></span><br><span class="line"><span class="addition">+ background-color: rgba(white, $post-card-opacity);</span></span><br><span class="line"><span class="addition">+ box-shadow: 0 1px 8px rgba(white, 0.1);</span></span><br></pre></td></tr></table></figure>
 
 <h4 id="widget-notice-styl"><a href="#widget-notice-styl" class="headerlink" title="_widget/notice.styl"></a>_widget/notice.styl</h4><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># .notice &#123;</span><br><span class="line"><span class="deletion">-   max-width: calc(900px - 2rem);</span></span><br><span class="line"><span class="addition">+   max-width: calc(1000px - 2rem);</span></span><br></pre></td></tr></table></figure>
 
