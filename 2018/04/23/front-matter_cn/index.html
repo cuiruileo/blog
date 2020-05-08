@@ -14,8 +14,6 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -226,11 +224,11 @@
                 <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2020-05-04 21:12:57" itemprop="dateModified" datetime="2020-05-04T21:12:57+08:00">2020-05-04</time>
               </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
+                <span class="post-meta-item-text">Symbols: </span>
               <span>2.9k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
@@ -238,7 +236,7 @@
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>3 mins</span>
             </span>
 
           
@@ -324,7 +322,7 @@
 <h3 id="permalink"><a href="#permalink" class="headerlink" title="permalink"></a>permalink</h3><p>permalink    Overrides the default permalink of the post<br>permalink    覆盖文章网址    </p>
 <h3 id="keywords"><a href="#keywords" class="headerlink" title="keywords"></a>keywords</h3><p>keywords    The keywords that only used in meta tag and Open Graph (not recommended)<br>keywords    仅用于 meta 标签和 Open Graph 的关键词（不推荐使用）    </p>
 <h3 id="excerpt"><a href="#excerpt" class="headerlink" title="excerpt"></a>excerpt</h3><p>excerpt    Page excerpt in plain text. Use this plugin to format the text<br>excerpt: 摘要（不需要在 Front-matter 中设置，通过 <!-- more --> 截断实现，预览卡片与正文中均出现）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用&lt;!-- more --&gt;</span><br></pre></td></tr></table></figure>
 
 <h2 id="Yun主题参数"><a href="#Yun主题参数" class="headerlink" title="Yun主题参数"></a>Yun主题参数</h2><h3 id="type"><a href="#type" class="headerlink" title="type"></a>type</h3><p>= tags, categories, albums</p>
 <p>为文章设置 type 属性，即可将其转为其他类型卡片，你也可以自己在 yun.yml 设置你跳转不同链接专属的图标和颜色。</p>
@@ -768,19 +766,20 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">48k</span>
+      <span class="post-meta-item-text">Total symbols: </span>
+    <span title="Total symbols">50k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">44 mins.</span>
+      <span class="post-meta-item-text">Total reading time &asymp;</span>
+    <span title="Total reading time">46 mins</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
+        <span class="post-meta-item-text">Total Visitors: </span>
       <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
@@ -790,6 +789,7 @@
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
+        <span class="post-meta-item-text">Total Views: </span>
       <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
@@ -808,6 +808,7 @@
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>

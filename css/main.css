@@ -1225,7 +1225,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #20ffb8;
+  background: #c8d2a6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1888,9 +1888,6 @@ pre .javascript .function {
   .post-meta-item-icon {
     display: inline-block;
   }
-}
-.post-meta-item-text {
-  display: none;
 }
 @media (max-width: 991px) {
   .post-meta-item-text {
@@ -2751,26 +2748,39 @@ body {
 .popup {
   opacity: 0.95;
 }
-@media (prefers-color-scheme: dark) {
-  body {
-    background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
-  }
-  .header-inner {
-    background: rgba(51,51,51,0.9);
-  }
+.site-toc-count {
+  color: #999;
+  font-size: 0.8125em;
+  margin-top: 10px;
+  text-align: center;
 }
 .posts-collapse .collection-title {
-  margin: 48px 0 0 0;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 48px 0;
+}
+.posts-collapse .collection-title {
+  margin-left: -20px;
+  width: 33%;
+  padding: 0 20px 0 0;
+  text-align: right;
+  background: rgba(255,255,255,0.3);
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+  transition: all 1s cubic-bezier(0.17, 0.08, 0.04, 0.99);
+}
+.posts-collapse .collection-title::before {
+  height: 8px;
+  width: 8px;
+  margin-left: 15px;
+}
+.posts-collapse .collection-title:hover {
+  width: 80%;
+  background: rgba(255,255,255,0.5);
 }
 .posts-collapse .post-header {
   border-bottom: 1px dashed #ccc;
   margin: 24px 0;
-}
-.footer {
-  color: #808080;
-}
-.theme-link {
-  color: #696969;
 }
 .post-body>p:first-child::first-letter {
   float: left;
@@ -2781,4 +2791,25 @@ body {
   line-height: 28px;
   font-style: normal;
   font-weight: 400;
+}
+.footer {
+  color: #808080;
+}
+.theme-link {
+  color: #696969;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
+  }
+  .header-inner {
+    background: rgba(51,51,51,0.9);
+  }
+  .posts-collapse .collection-title {
+    background: rgba(51,51,51,0.3);
+    box-shadow: 0 8px 20px -8px rgba(204,204,204,0.3);
+  }
+  .posts-collapse .collection-title:hover {
+    background: rgba(51,51,51,0.5);
+  }
 }

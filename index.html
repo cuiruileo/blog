@@ -14,8 +14,6 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
@@ -222,13 +220,12 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-04 22:52:39" itemprop="dateModified" datetime="2020-05-04T22:52:39+08:00">2020-05-04</time>
+                <time title="Modified: 2020-05-06 18:56:06" itemprop="dateModified" datetime="2020-05-06T18:56:06+08:00">2020-05-06</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -240,19 +237,19 @@
                   <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>11k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>12k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>10 mins.</span>
+              <span>11 mins</span>
             </span>
 
           
@@ -280,12 +277,29 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>This is the record of modification of theme diaspora.</p>
-<div class="tabs" id="adding-custom-page"><ul class="nav-tabs"><li class="tab active"><a href="#adding-custom-page-1">Adding New Page →</a></li><li class="tab"><a href="#adding-custom-page-2">Setting Front-matter Values →</a></li><li class="tab"><a href="#adding-custom-page-3">Editting Menu</a></li></ul><div class="tab-content"><div class="tab-pane active" id="adding-custom-page-1"><p>In your terminal emulator, change to Hexo site dir. Use <code>hexo new page custom_name</code> to create a new <code>custom_name</code> page:</p>
-<pre><code>$ cd your-hexo-site
-$ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-custom-page-2"><p>Front-matter is a block of YAML or JSON at the beginning of the file that is used to configure settings for your writings. Settings Front-matter values and more detailed can be found in <a href="https://hexo.io/docs/front-matter" target="_blank" rel="noopener">Front-matter</a>. You can also add contents in <code>custom_name/index.md</code> if you like.</p>
-<figure class="highlight md"><table><tr><td class="code"><pre><span class="line">title: custom_name</span><br><span class="line">date: 2014-12-22 12:39:04</span><br><span class="line">---</span><br></pre></td></tr></table></figure></div><div class="tab-pane" id="adding-custom-page-3"><p>Add <code>custom_name</code> to <code>menu</code> by editing <span class="label primary">theme config file</span>, like adding <code>about</code> page:</p>
-<figure class="highlight yml"><figcaption><span>next/_config.yml</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span></span><br></pre></td></tr></table></figure></div></div></div>
+          <h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><blockquote>
+<p>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next</p>
+</blockquote>
+<h2 id="Required-Plugins"><a href="#Required-Plugins" class="headerlink" title="Required Plugins"></a>Required Plugins</h2><h3 id="Default-plugins"><a href="#Default-plugins" class="headerlink" title="Default plugins"></a>Default plugins</h3><blockquote>
+<p>npm install hexo-generator-index hexo-generator-archive hexo-generator-category hexo-generator-tag</p>
+</blockquote>
+<h3 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h3><blockquote>
+<p>npm install hexo-generator-feed</p>
+</blockquote>
+<h3 id="Sitemap"><a href="#Sitemap" class="headerlink" title="Sitemap"></a>Sitemap</h3><blockquote>
+<p>npm install hexo-generator-sitemap hexo-generator-baidu-sitemap</p>
+</blockquote>
+<h3 id="Time-Counter"><a href="#Time-Counter" class="headerlink" title="Time Counter"></a>Time Counter</h3><blockquote>
+<p>npm install hexo-symbols-count-time</p>
+</blockquote>
+<p>Then, add configuration to <code>root/_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h3><blockquote>
+<p>npm install hexo-generator-searchdb</p>
+</blockquote>
+<p>Then, add configuration to <code>root/_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/04/26/mod-next/#more" rel="contents">
@@ -349,7 +363,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -361,19 +374,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>9.9k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>10k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>9 mins.</span>
+              <span>9 mins</span>
             </span>
 
           
@@ -472,7 +485,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -484,19 +496,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>6.6k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>6.9k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>6 mins.</span>
+              <span>6 mins</span>
             </span>
 
           
@@ -593,7 +605,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -605,11 +616,11 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
+                <span class="post-meta-item-text">Symbols: </span>
               <span>1.1k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
@@ -617,7 +628,7 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>1 mins</span>
             </span>
 
           
@@ -717,7 +728,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
@@ -729,19 +739,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/hexo/" itemprop="url" rel="tag"><span itemprop="name">hexo</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>5.3k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>5.4k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>5 mins.</span>
+              <span>5 mins</span>
             </span>
 
           
@@ -831,11 +841,11 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                 <span class="post-meta-item-text">Edited on</span>
                 <time title="Modified: 2020-05-04 22:46:20" itemprop="dateModified" datetime="2020-05-04T22:46:20+08:00">2020-05-04</time>
               </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
+                <span class="post-meta-item-text">Symbols: </span>
               <span>45</span>
             </span>
             <span class="post-meta-item" title="Reading time">
@@ -843,7 +853,7 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>1 mins</span>
             </span>
 
           
@@ -937,11 +947,11 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/plugins/" itemprop="url" rel="tag"><span itemprop="name">plugins</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
+                <span class="post-meta-item-text">Symbols: </span>
               <span>973</span>
             </span>
             <span class="post-meta-item" title="Reading time">
@@ -949,7 +959,7 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>1 mins.</span>
+              <span>1 mins</span>
             </span>
 
           
@@ -1041,7 +1051,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a>
                 </span>
@@ -1053,19 +1062,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/progress/" itemprop="url" rel="tag"><span itemprop="name">progress</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.2k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>3.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>3 mins</span>
             </span>
 
           
@@ -1095,17 +1104,17 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
       
           <p>ddd-test</p>
 <p><code>layout/archive.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/category.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 
 <p><code>layout/tag.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/_macro/post-collapse.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1162,7 +1171,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a>
                 </span>
@@ -1174,19 +1182,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/progress/" itemprop="url" rel="tag"><span itemprop="name">progress</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.2k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>3.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>3 mins</span>
             </span>
 
           
@@ -1216,17 +1224,17 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
       
           <p>test-ddd</p>
 <p><code>layout/archive.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/category.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 
 <p><code>layout/tag.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/_macro/post-collapse.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1283,7 +1291,6 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
-              <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
                   <a href="/categories/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a>
                 </span>
@@ -1295,19 +1302,19 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
                   <a href="/tags/progress/" itemprop="url" rel="tag"><span itemprop="name">progress</span></a>
                 </span>
             </span>
-            <span class="post-meta-item" title="Symbols count in article">
+            <span class="post-meta-item" title="Symbols">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
               </span>
-                <span class="post-meta-item-text">Symbols count in article: </span>
-              <span>3.2k</span>
+                <span class="post-meta-item-text">Symbols: </span>
+              <span>3.3k</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins.</span>
+              <span>3 mins</span>
             </span>
 
           
@@ -1336,17 +1343,17 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
 
       
           <p><code>layout/archive.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/category.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 
 <p><code>layout/tag.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
 <p><code>layout/_macro/post-collapse.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1542,19 +1549,20 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-      <span class="post-meta-item-text">Symbols count total: </span>
-    <span title="Symbols count total">48k</span>
+      <span class="post-meta-item-text">Total symbols: </span>
+    <span title="Total symbols">50k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-      <span class="post-meta-item-text">Reading time total &asymp;</span>
-    <span title="Reading time total">44 mins.</span>
+      <span class="post-meta-item-text">Total reading time &asymp;</span>
+    <span title="Total reading time">46 mins</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
         <i class="fa fa-user"></i>
       </span>
+        <span class="post-meta-item-text">Total Visitors: </span>
       <span class="site-uv" title="Total Visitors">
         <span id="busuanzi_value_site_uv"></span>
       </span>
@@ -1564,6 +1572,7 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
       <span class="post-meta-item-icon">
         <i class="fa fa-eye"></i>
       </span>
+        <span class="post-meta-item-text">Total Views: </span>
       <span class="site-pv" title="Total Views">
         <span id="busuanzi_value_site_pv"></span>
       </span>
@@ -1582,6 +1591,7 @@ $ hexo new page custom_name</code></pre></div><div class="tab-pane" id="adding-c
   </div>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/pjax/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
