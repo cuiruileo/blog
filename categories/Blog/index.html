@@ -124,7 +124,7 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">3</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">6</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -366,7 +366,7 @@
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc">
-            Table of Categories
+          Contents
         </li>
         <li class="sidebar-nav-overview">
           Overview
@@ -375,16 +375,8 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-        <div class="post-toc motion-element">
-            <div class="">
-              <div class="">
-                <a class="category-link" href="/categories/Blog/">Blog<span class="category-count">6</span></a>, <a class="category-link" href="/categories/Test/">Test<span class="category-count">1</span></a>, <a class="category-link" href="/categories/test/">test<span class="category-count">2</span></a>
-              </div>
-              <div class="site-toc-count">
-                3 categories in total
-              </div>
-            </div>
-        </div>
+          <div class="post-sidebar"><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Blog/">Blog</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Required-Plugins/">Required Plugins</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Required-Plugins/Default-plugins/">Default plugins</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Required-Plugins/Default-plugins/level-3/">level 3</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul></div>
+          <div class="post-toc motion-element"><div class="count">6 categories in total</div></div>
       </div>
       <!--/noindex-->
 
@@ -405,8 +397,7 @@
     .then(function (data) {
       var hitokoto = document.getElementById('hitokoto');
       hitokoto.innerText = data.hitokoto;
-      var hitofrom = document.getElementById('hitofrom');
-      hitofrom.innerText = "——" + data.from + '\xa0'; 
+      
     })
     .catch(function (err) {
       console.error(err);
@@ -426,7 +417,7 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -487,8 +478,7 @@
   <span class="with-love">
     <i class="fa fa-cloud"></i>
   </span>
-
-  <span class="author" itemprop="copyrightHolder"><a class="theme-link" href='/about/'>Leo.C</a>. All Rights Reserved. </span>Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
+  <span class="author" itemprop="copyrightHolder"><a class="theme-link" href='/about/'>Leo.C</a>. All Rights Reserved. </span>Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a>
 </div>
 
         
@@ -498,7 +488,7 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Total symbols: </span>
-    <span title="Total symbols">67k</span>
+    <span title="Total symbols">66k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
@@ -540,7 +530,7 @@
 
   
   <script src="/lib/anime.min.js"></script>
-  <script src="/lib/pjax/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/next-theme/pjax@0/pjax.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -633,8 +623,41 @@ document.addEventListener('pjax:success', () => {
 
 
 
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
 
 
+<script data-pjax>
+if (document.querySelectorAll('pre.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8/dist/mermaid.min.js', () => {
+    mermaid.initialize({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    });
+  }, window.mermaid);
+}
+</script>
 
 
     <div id="pjax">
