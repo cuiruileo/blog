@@ -1553,10 +1553,13 @@ pre code {
   margin-bottom: 10px;
   margin-right: 10px;
   vertical-align: middle;
+  transition-delay: 0s;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ffff6a;
+  background: #ec78bf;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1883,6 +1886,16 @@ pre code {
 .back-to-top.back-to-top-on:hover {
   opacity: 0.8;
 }
+.reading-progress-bar {
+  background: #2299dd;
+  display: block;
+  height: 3px;
+  left: 0;
+  position: fixed;
+  width: 0;
+  z-index: 1500;
+  top: 0;
+}
 .post-body {
   font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
@@ -1974,6 +1987,7 @@ pre code {
   width: 8px;
 }
 .posts-collapse .collection-header {
+  font-size: 0.875em;
   display: block;
   margin: 0 0 0 20px;
 }
@@ -2978,6 +2992,20 @@ ul.breadcrumb li + li:last-child {
 }
 .links-of-blogroll-item {
   padding: 0;
+  display: inline-block;
+  margin: 5px 0 0;
+}
+.links-of-blogroll-item a,
+.links-of-blogroll-item span.exturl {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 0;
+  max-width: 216px;
+  overflow: hidden;
+  padding: 0 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .back-to-top {
   background: var(--body-bg-color);
@@ -3117,7 +3145,7 @@ ul.breadcrumb li + li:last-child {
   max-width: 1450px;
 }
 body {
-  background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
+  background-image: url("https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/background.jpg");
   background-repeat: repeat-x;
   background-attachment: fixed;
   background-size: cover;
@@ -3254,9 +3282,20 @@ body {
   width: 50%;
   background: rgba(255,255,255,0.5);
 }
+.posts-collapse .collection-header {
+  font-size: 0.9em;
+}
 .posts-collapse .post-header {
   border-bottom: 1px dashed #ccc;
   margin: 24px 0;
+}
+.posts-expand .post-meta {
+  margin: 3px 0 30px 0;
+}
+@media (max-width: 567px) {
+  .posts-expand .post-meta {
+    margin: 3px 0 10px 0;
+  }
 }
 .post-body>p:first-child::first-letter {
   float: left;
@@ -3268,6 +3307,11 @@ body {
   font-style: normal;
   font-weight: 400;
 }
+.highlight .figcaption {
+  align-content: center;
+  align-items: center;
+  align-self: center;
+}
 .footer {
   color: #808080;
 }
@@ -3276,7 +3320,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-image: url("https://www.addesp.com/api/image/wallpaper/acg/?type=image");
+    background-image: url("https://blog.bill.moe/images/background-dark.jpg");
   }
   .header-inner {
     background: rgba(51,51,51,0.9);

@@ -14,26 +14,28 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"8.0.0-rc.2","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false,"display":"post"},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="test-ddd layout&#x2F;archive.swig 1234567891011121314151617181920212223242526272829303132333435# Archive content header-         &amp;#123;%- set posts_length &#x3D; site.posts.length %&amp;#125;-         &amp;#123;%- if p">
+  <meta name="description" content="生成引号的文本居中引用语法 123&amp;#123;% cq %&amp;#125;内容&amp;#123;% endcq %&amp;#125;  样例                           人生乃是一面镜子，从镜子里认识自己，我要称之为头等大事，也只是我们追求的目的！                           作者声明标明的引用语法 123&amp;#123;% blockquote 作者 %&amp;#125;内">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NexT test-ddd">
-<meta property="og:url" content="http://blog.adachi.club/2019/01/23/cousu/index.html">
+<meta property="og:title" content="NexT Style">
+<meta property="og:url" content="http://blog.adachi.club/2020/05/14/next-tag_style/index.html">
 <meta property="og:site_name" content="Leo&#39;s Repository">
-<meta property="og:description" content="test-ddd layout&#x2F;archive.swig 1234567891011121314151617181920212223242526272829303132333435# Archive content header-         &amp;#123;%- set posts_length &#x3D; site.posts.length %&amp;#125;-         &amp;#123;%- if p">
+<meta property="og:description" content="生成引号的文本居中引用语法 123&amp;#123;% cq %&amp;#125;内容&amp;#123;% endcq %&amp;#125;  样例                           人生乃是一面镜子，从镜子里认识自己，我要称之为头等大事，也只是我们追求的目的！                           作者声明标明的引用语法 123&amp;#123;% blockquote 作者 %&amp;#125;内">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-01-23T04:05:59.000Z">
-<meta property="article:modified_time" content="2020-05-04T13:11:46.636Z">
+<meta property="article:published_time" content="2020-05-14T04:05:59.000Z">
+<meta property="article:modified_time" content="2020-05-16T05:44:55.813Z">
 <meta property="article:author" content="Leo.C">
-<meta property="article:tag" content="progress">
+<meta property="article:tag" content="NexT">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://blog.adachi.club/2019/01/23/cousu/">
+<link rel="canonical" href="http://blog.adachi.club/2020/05/14/next-tag_style/">
 
 
 <script id="page-configurations">
@@ -46,7 +48,7 @@
   };
 </script>
 
-  <title>NexT test-ddd | Leo's Repository</title>
+  <title>NexT Style | Leo's Repository</title>
   
 
 
@@ -127,12 +129,12 @@
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">6</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">3</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-board">
@@ -177,6 +179,7 @@
     </header>
 
     
+  <div class="reading-progress-bar"></div>
 
 
     <main class="main">
@@ -191,7 +194,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://blog.adachi.club/2019/01/23/cousu/">
+    <link itemprop="mainEntityOfPage" href="http://blog.adachi.club/2020/05/14/next-tag_style/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/avatar.png">
@@ -204,7 +207,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          NexT test-ddd
+          NexT Style
         </h1>
 
         <div class="post-meta">
@@ -214,27 +217,27 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-01-23 12:05:59" itemprop="dateCreated datePublished" datetime="2019-01-23T12:05:59+08:00">2019-01-23</time>
+              <time title="Created: 2020-05-14 12:05:59" itemprop="dateCreated datePublished" datetime="2020-05-14T12:05:59+08:00">2020-05-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-05-04 21:11:46" itemprop="dateModified" datetime="2020-05-04T21:11:46+08:00">2020-05-04</time>
+                <time title="Modified: 2020-05-16 13:44:55" itemprop="dateModified" datetime="2020-05-16T13:44:55+08:00">2020-05-16</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/test/" itemprop="url" rel="index"><span itemprop="name">test</span></a>
+                  <a href="/categories/Blog/" itemprop="url" rel="index"><span itemprop="name">Blog</span></a>
                 </span>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon"><i class="fa fa-tag"></i></span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/tags/progress/" itemprop="url" rel="tag"><span itemprop="name">progress</span></a>
+                  <a href="/tags/NexT/" itemprop="url" rel="tag"><span itemprop="name">NexT</span></a>
                 </span>
             </span>
             <span class="post-meta-item" title="Symbols">
@@ -242,14 +245,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">Symbols: </span>
-              <span>3.3k</span>
+              <span>564</span>
             </span>
             <span class="post-meta-item" title="Reading time">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">Reading time &asymp;</span>
-              <span>3 mins</span>
+              <span>1 mins</span>
             </span>
 
           
@@ -268,8 +271,8 @@
       </span>
       <span class="post-meta-item-text">Valine: </span>
     
-    <a title="valine" href="/2019/01/23/cousu/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2019/01/23/cousu/" itemprop="commentCount"></span>
+    <a title="valine" href="/2020/05/14/next-tag_style/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/14/next-tag_style/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -284,19 +287,55 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>test-ddd</p>
-<p><code>layout/archive.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"># Archive content header</span><br><span class="line"><span class="deletion">-         &#123;%- set posts_length = site.posts.length %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- if posts_length &gt; 210 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'excellent' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 130 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'great' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 80 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'good' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 50 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'nice' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% elif posts_length &gt; 30 %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'ok' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;% else %&#125;</span></span><br><span class="line"><span class="deletion">-           &#123;%- set cheers = 'um' %&#125;</span></span><br><span class="line"><span class="deletion">-         &#123;%- endif %&#125;</span></span><br><span class="line"><span class="deletion">-         &lt;span class="collection-header"&gt;&#123;&#123; __('cheers.' + cheers) &#125;&#125;! &#123;&#123; _p('counter.archive_posts', site.posts.length) &#125;&#125; &#123;&#123; __('keep_on') &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;h2 class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123;- page.year &#125;&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;/h2&gt;</span></span><br><span class="line"></span><br><span class="line"># Archive content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_year() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.archive') &#125;&#125; : &#123;&#123; list_archives (&#123; type: 'yearly', show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+        <h3 id="生成引号的文本居中引用"><a href="#生成引号的文本居中引用" class="headerlink" title="生成引号的文本居中引用"></a>生成引号的文本居中引用</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
 
-<p><code>layout/category.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_category() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.category') &#125;&#125; : &#123;&#123; list_categories (&#123; show_count: false, style: '', separator: ' ', depth: '1' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>样例</strong></p>
+<blockquote class="blockquote-center">
+            <i class="fa fa-quote-left"></i>
+            <p>人生乃是一面镜子，<br>从镜子里认识自己，<br>我要称之为头等大事，<br>也只是我们追求的目的！</p>
+
+            <i class="fa fa-quote-right"></i>
+          </blockquote>
+
+<h3 id="作者声明标明的引用"><a href="#作者声明标明的引用" class="headerlink" title="作者声明标明的引用"></a>作者声明标明的引用</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% blockquote 作者 %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<blockquote><p>内容</p>
+<footer><strong>作者</strong></footer></blockquote>
+
+<h3 id="主题自带样式-note-标签"><a href="#主题自带样式-note-标签" class="headerlink" title="主题自带样式 note 标签"></a>主题自带样式 note 标签</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;note 名称&quot;&gt;&lt;p&gt;内容&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<h3 id="主题自带样式-lable-标签"><a href="#主题自带样式-lable-标签" class="headerlink" title="主题自带样式 lable 标签"></a>主题自带样式 lable 标签</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label primary@测试primar显示效果 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<span class="label primary">测试primar显示效果</span>
+
+<h3 id="主题自带样式的tab标签（选项卡）"><a href="#主题自带样式的tab标签（选项卡）" class="headerlink" title="主题自带样式的tab标签（选项卡）"></a>主题自带样式的tab标签（选项卡）</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs 标签1,标签2,标签3,-1 %&#125; </span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<div class="tabs" id="标签1"><ul class="nav-tabs"><li class="tab active"><a href="#标签1-1">标签1 1</a></li><li class="tab"><a href="#标签1-2">标签1 2</a></li><li class="tab"><a href="#标签1-3">标签1 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签1-1"><p>内容1</p></div><div class="tab-pane" id="标签1-2"><p>内容2</p></div><div class="tab-pane" id="标签1-3"><p>内容3</p></div></div></div>
 
 
-<p><code>layout/tag.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># Tag content footer</span><br><span class="line">#       &#123;&#123; post_template.render(page.posts) &#125;&#125;</span><br><span class="line"><span class="addition">+       &#123;%- if is_tag() %&#125;</span></span><br><span class="line"><span class="addition">+         &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+           &lt;span class="collection-header"&gt;</span></span><br><span class="line"><span class="addition">+             &lt;small&gt;&#123;&#123; __('title.tag') &#125;&#125; : &#123;&#123; list_tags (&#123; show_count: false, style: '', separator: ' ' &#125;) &#125;&#125;&lt;/small&gt;</span></span><br><span class="line"><span class="addition">+           &lt;/span&gt;</span></span><br><span class="line"><span class="addition">+         &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+       &#123;%- endif %&#125;</span></span><br><span class="line">#     &lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
-<p><code>layout/_macro/post-collapse.swig</code></p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-   &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="deletion">- </span></span><br><span class="line"><span class="deletion">-   &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="deletion">-     &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="deletion">-     &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="deletion">-       &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="deletion">-     &lt;/div&gt;</span></span><br><span class="line"><span class="deletion">-   &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- if is_archive() and not is_year() %&#125;</span></span><br><span class="line"><span class="addition">+     &#123;%- set year = date(post.date, 'YYYY') %&#125;</span></span><br><span class="line"><span class="addition">+ </span></span><br><span class="line"><span class="addition">+     &#123;%- if year !== current_year %&#125;</span></span><br><span class="line"><span class="addition">+       &#123;%- set current_year = year %&#125;</span></span><br><span class="line"><span class="addition">+       &lt;div class="collection-year"&gt;</span></span><br><span class="line"><span class="addition">+         &lt;span class="collection-header"&gt;&#123;&#123; current_year &#125;&#125;&lt;/span&gt;</span></span><br><span class="line"><span class="addition">+       &lt;/div&gt;</span></span><br><span class="line"><span class="addition">+     &#123;%- endif %&#125;</span></span><br><span class="line"><span class="addition">+   &#123;%- endif %&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="deletion">-             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- if is_archive() %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- else %&#125;</span></span><br><span class="line"><span class="addition">+             &#123;&#123; date(post.date, 'YYYY-MM-DD') &#125;&#125;</span></span><br><span class="line"><span class="addition">+           &#123;%- endif %&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>语法</strong></p>
+<pre><code></code></pre><p><strong>样例</strong></p>
 
     </div>
 
@@ -312,13 +351,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/01/23/test1/" rel="prev" title="NexT Progress">
-      <i class="fa fa-chevron-left"></i> NexT Progress
+    <a href="/2020/05/10/mod-next/" rel="prev" title="NexT Modification">
+      <i class="fa fa-chevron-left"></i> NexT Modification
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2019/01/23/coushu/" rel="next" title="NexT ddd-test">
-      NexT ddd-test <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -378,6 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#生成引号的文本居中引用"><span class="nav-text">生成引号的文本居中引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作者声明标明的引用"><span class="nav-text">作者声明标明的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题自带样式-note-标签"><span class="nav-text">主题自带样式 note 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题自带样式-lable-标签"><span class="nav-text">主题自带样式 lable 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#主题自带样式的tab标签（选项卡）"><span class="nav-text">主题自带样式的tab标签（选项卡）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#"><span class="nav-text"></span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -418,13 +455,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">categories</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -451,6 +488,22 @@
   </div>
 
 
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.baidu.com/" title="http:&#x2F;&#x2F;www.baidu.com&#x2F;" rel="noopener" target="_blank">baidu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://adachi.club/" title="http:&#x2F;&#x2F;adachi.club&#x2F;" rel="noopener" target="_blank">Adachi</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://blog.adachi.club/" title="http:&#x2F;&#x2F;blog.adachi.club&#x2F;">Blog</a>
+        </li>
+    </ul>
+  </div>
 
       </div>
         <div class="back-to-top motion-element">
@@ -489,13 +542,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">Total symbols: </span>
-    <span title="Total symbols">66k</span>
+    <span title="Total symbols">64k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">Total reading time &asymp;</span>
-    <span title="Total reading time">1:01</span>
+    <span title="Total reading time">58 mins</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
