@@ -684,6 +684,10 @@ code {
 .highlight figcaption a:hover {
   border-bottom-color: var(--highlight-foreground);
 }
+.highlight figcaption a,
+.highlight figcaption span {
+  min-width: 0;
+}
 .highlight .gutter {
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1559,7 +1563,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ec78bf;
+  background: #63c4a1;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1987,7 +1991,6 @@ pre code {
   width: 8px;
 }
 .posts-collapse .collection-header {
-  font-size: 0.875em;
   display: block;
   margin: 0 0 0 20px;
 }
@@ -3320,7 +3323,7 @@ body {
 }
 @media (prefers-color-scheme: dark) {
   body {
-    background-image: url("https://blog.bill.moe/images/background-dark.jpg");
+    background-image: url("https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/background-dark.jpg");
   }
   .header-inner {
     background: rgba(51,51,51,0.9);
