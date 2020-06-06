@@ -307,7 +307,7 @@ kbd {
   border: 1px solid #ccc;
   border-radius: 0.2em;
   box-shadow: 0.1em 0.1em 0.2em rgba(0,0,0,0.1);
-  color: #555;
+  color: var(--text-color);
   font-family: inherit;
   padding: 0.1em 0.3em;
   white-space: nowrap;
@@ -645,9 +645,9 @@ code {
   font-family: consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
-  background: #eee;
+  background: var(--body-bg-color);
   border-radius: 3px;
-  color: #555;
+  color: var(--text-color);
   padding: 2px 4px;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -1200,10 +1200,8 @@ pre code {
 .pagination .page-number,
 .pagination .space {
   display: inline-block;
-  margin: 0 10px;
-  padding: 0 11px;
-  position: relative;
-  top: -1px;
+  margin: -1px 10px 0 10px;
+  padding: 0 10px;
 }
 @media (max-width: 767px) {
   .pagination .prev,
@@ -1233,38 +1231,31 @@ pre code {
 .pagination .page-number:hover {
   border-top-color: var(--link-hover-color);
 }
-.pagination .space {
-  margin: 0;
-  padding: 0;
-}
-.pagination .prev {
-  margin-left: 0;
-}
-.pagination .next {
-  margin-right: 0;
-}
-.pagination .page-number.current {
-  background: #ccc;
-  border-top-color: #ccc;
-  color: var(--content-bg-color);
-}
 @media (max-width: 767px) {
   .pagination {
-    border-top: none;
+    border-top: 0;
+    margin-bottom: 10px;
   }
   .pagination .prev,
   .pagination .next,
   .pagination .page-number {
     border-bottom: 1px solid #eee;
     border-top: 0;
-    margin-bottom: 10px;
-    padding: 0 10px;
   }
   .pagination .prev:hover,
   .pagination .next:hover,
   .pagination .page-number:hover {
     border-bottom-color: var(--link-hover-color);
   }
+}
+.pagination .space {
+  margin: 0;
+  padding: 0;
+}
+.pagination .page-number.current {
+  background: #ccc;
+  border-top-color: #ccc;
+  color: var(--content-bg-color);
 }
 .comments {
   margin-top: 60px;
@@ -1563,7 +1554,7 @@ pre code {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #368e22;
+  background: #c2ffff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2788,7 +2779,7 @@ ul.breadcrumb li + li:last-child {
   left: 30px;
 }
 .footer-inner {
-  padding-right: 260px;
+  padding-right: 252px;
 }
 @media (max-width: 991px) {
   .footer-inner {
@@ -3056,12 +3047,6 @@ ul.breadcrumb li + li:last-child {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
   margin: 12px 0 0;
   padding: 10px 0 10px;
-}
-.pagination .prev,
-.pagination .next,
-.pagination .page-number {
-  margin-bottom: initial;
-  top: initial;
 }
 .main {
   padding-bottom: initial;
