@@ -303,7 +303,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% label primary@测试primar显示效果 %&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>样例</strong></p>
-<span class="label primary">测试primar显示效果</span>
+<mark class="label primary">测试primar显示效果</mark>
 
 <h3 id="主题自带样式的tab标签（选项卡）"><a href="#主题自带样式的tab标签（选项卡）" class="headerlink" title="主题自带样式的tab标签（选项卡）"></a>主题自带样式的tab标签（选项卡）</h3><p><strong>语法</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs 标签1,标签2,标签3,-1 %&#125; </span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
@@ -1797,8 +1797,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
     new Valine(Object.assign({
-      el         : '#valine-comments',
-      path       : location.pathname,
+      el  : '#valine-comments',
+      path: location.pathname,
     }, {"enable":true,"appId":"QtdE5PNHKovxnWvgY4gwhmRQ-gzGzoHsz","appKey":"PCHPi54KSEH775QJBs1P5io3","notify":false,"verify":false,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null}
     ));
   }, window.Valine);

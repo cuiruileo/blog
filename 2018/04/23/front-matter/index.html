@@ -673,8 +673,8 @@ if (document.querySelectorAll('pre.mermaid').length) {
 NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js', () => {
     new Valine(Object.assign({
-      el         : '#valine-comments',
-      path       : location.pathname,
+      el  : '#valine-comments',
+      path: location.pathname,
     }, {"enable":true,"appId":"QtdE5PNHKovxnWvgY4gwhmRQ-gzGzoHsz","appKey":"PCHPi54KSEH775QJBs1P5io3","notify":false,"verify":false,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"language":null,"visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null}
     ));
   }, window.Valine);

@@ -755,66 +755,6 @@ function <span class="token function">greet</span><span class="token punctuation
       </tags>
   </entry>
   <entry>
-    <title>NexT Style</title>
-    <url>/2020/05/14/next-tag_style/</url>
-    <content><![CDATA[<h3 id="生成引号的文本居中引用"><a href="#生成引号的文本居中引用" class="headerlink" title="生成引号的文本居中引用"></a>生成引号的文本居中引用</h3><p><strong>语法</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例</strong></p>
-<blockquote class="blockquote-center">
-<i class="fa fa-quote-left"></i>
-<p>人生乃是一面镜子，<br>从镜子里认识自己，<br>我要称之为头等大事，<br>也只是我们追求的目的！</p>
-
-<i class="fa fa-quote-right"></i>
-</blockquote>
-
-<h3 id="作者声明标明的引用"><a href="#作者声明标明的引用" class="headerlink" title="作者声明标明的引用"></a>作者声明标明的引用</h3><p><strong>语法</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 作者 %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例</strong></p>
-<blockquote><p>内容</p>
-<footer><strong>作者</strong></footer></blockquote>
-
-<h3 id="主题自带样式-note-标签"><a href="#主题自带样式-note-标签" class="headerlink" title="主题自带样式 note 标签"></a>主题自带样式 note 标签</h3><p><strong>语法</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;note 名称&quot;&gt;&lt;p&gt;内容&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例</strong></p>
-<h3 id="主题自带样式-lable-标签"><a href="#主题自带样式-lable-标签" class="headerlink" title="主题自带样式 lable 标签"></a>主题自带样式 lable 标签</h3><p><strong>语法</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label primary@测试primar显示效果 %&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例</strong></p>
-<span class="label primary">测试primar显示效果</span>
-
-<h3 id="主题自带样式的tab标签（选项卡）"><a href="#主题自带样式的tab标签（选项卡）" class="headerlink" title="主题自带样式的tab标签（选项卡）"></a>主题自带样式的tab标签（选项卡）</h3><p><strong>语法</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 标签1,标签2,标签3,-1 %&#125; </span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>样例</strong></p>
-<div class="tabs" id="标签1"><ul class="nav-tabs"><li class="tab active"><a href="#标签1-1">标签1 1</a></li><li class="tab"><a href="#标签1-2">标签1 2</a></li><li class="tab"><a href="#标签1-3">标签1 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签1-1"><p>内容1</p></div><div class="tab-pane" id="标签1-2"><p>内容2</p></div><div class="tab-pane" id="标签1-3"><p>内容3</p></div></div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>语法</strong></p>
-<pre><code></code></pre><p><strong>样例</strong></p>
-]]></content>
-      <categories>
-        <category>Blog</category>
-      </categories>
-      <tags>
-        <tag>NexT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安达充站配置</title>
     <url>/2020/04/12/mod-yun/</url>
     <content><![CDATA[<p>本站由Hexo驱动，主题基于Yun。</p>
@@ -999,6 +939,66 @@ function <span class="token function">greet</span><span class="token punctuation
       <tags>
         <tag>hexo</tag>
         <tag>yun</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NexT Style</title>
+    <url>/2020/05/14/next-tag_style/</url>
+    <content><![CDATA[<h3 id="生成引号的文本居中引用"><a href="#生成引号的文本居中引用" class="headerlink" title="生成引号的文本居中引用"></a>生成引号的文本居中引用</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<blockquote class="blockquote-center">
+<i class="fa fa-quote-left"></i>
+<p>人生乃是一面镜子，<br>从镜子里认识自己，<br>我要称之为头等大事，<br>也只是我们追求的目的！</p>
+
+<i class="fa fa-quote-right"></i>
+</blockquote>
+
+<h3 id="作者声明标明的引用"><a href="#作者声明标明的引用" class="headerlink" title="作者声明标明的引用"></a>作者声明标明的引用</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% blockquote 作者 %&#125;</span><br><span class="line">内容</span><br><span class="line">&#123;% endblockquote %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<blockquote><p>内容</p>
+<footer><strong>作者</strong></footer></blockquote>
+
+<h3 id="主题自带样式-note-标签"><a href="#主题自带样式-note-标签" class="headerlink" title="主题自带样式 note 标签"></a>主题自带样式 note 标签</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;note 名称&quot;&gt;&lt;p&gt;内容&lt;&#x2F;p&gt;&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<h3 id="主题自带样式-lable-标签"><a href="#主题自带样式-lable-标签" class="headerlink" title="主题自带样式 lable 标签"></a>主题自带样式 lable 标签</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% label primary@测试primar显示效果 %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<mark class="label primary">测试primar显示效果</mark>
+
+<h3 id="主题自带样式的tab标签（选项卡）"><a href="#主题自带样式的tab标签（选项卡）" class="headerlink" title="主题自带样式的tab标签（选项卡）"></a>主题自带样式的tab标签（选项卡）</h3><p><strong>语法</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 标签1,标签2,标签3,-1 %&#125; </span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">内容3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>样例</strong></p>
+<div class="tabs" id="标签1"><ul class="nav-tabs"><li class="tab active"><a href="#标签1-1">标签1 1</a></li><li class="tab"><a href="#标签1-2">标签1 2</a></li><li class="tab"><a href="#标签1-3">标签1 3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="标签1-1"><p>内容1</p></div><div class="tab-pane" id="标签1-2"><p>内容2</p></div><div class="tab-pane" id="标签1-3"><p>内容3</p></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>语法</strong></p>
+<pre><code></code></pre><p><strong>样例</strong></p>
+]]></content>
+      <categories>
+        <category>Blog</category>
+      </categories>
+      <tags>
+        <tag>NexT</tag>
       </tags>
   </entry>
   <entry>
