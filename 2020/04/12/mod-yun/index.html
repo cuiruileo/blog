@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false,"display":"post"},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false,"display":"post"},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="本站由Hexo驱动，主题基于Yun。 引用及参照：  https:&#x2F;&#x2F;github.com&#x2F;hexojs&#x2F;hexo https:&#x2F;&#x2F;hexo.io&#x2F;zh-cn&#x2F;docs&#x2F;index.html https:&#x2F;&#x2F;github.com&#x2F;YunYouJun&#x2F;hexo-theme-yun https:&#x2F;&#x2F;yun.yunyoujun.cn&#x2F;guide&#x2F;">
@@ -59,6 +59,8 @@
 
   <noscript>
   <style>
+  body { margin-top: 2rem; }
+
   .use-motion .brand,
   .use-motion .menu-item,
   .sidebar-inner,
@@ -75,9 +77,14 @@
     top: initial;
   }
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
+  .use-motion .logo-line-before, .use-motion .logo-line-after {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
   </style>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Leo's Repository" type="application/atom+xml">
@@ -87,8 +94,9 @@
   <div class="container use-motion">
     <div class="headband"></div>
 
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="Toggle navigation bar">
         <span class="toggle-line toggle-line-first"></span>
@@ -100,9 +108,9 @@
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
+      <i class="logo-line-before"></i>
       <h1 class="site-title">Leo's Repository</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line-after"></i>
     </a>
       <p class="site-subtitle" itemprop="description">~ Recording daily growing up ~</p>
   </div>
@@ -177,19 +185,140 @@
   </div>
 
 </div>
-    </header>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
 
-    
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置"><span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#升级"><span class="nav-text">升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染器"><span class="nav-text">渲染器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类标签等系统插件"><span class="nav-text">分类标签等系统插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云"><span class="nav-text">标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎"><span class="nav-text">搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSS"><span class="nav-text">RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码高亮"><span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字数统计"><span class="nav-text">字数统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点统计"><span class="nav-text">站点统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置原则"><span class="nav-text">配置原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面头部"><span class="nav-text">页面头部</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-text">标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相册"><span class="nav-text">相册</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-text">关于</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于站点"><span class="nav-text">关于站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友情链接"><span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#女孩子们"><span class="nav-text">女孩子们</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题结构"><span class="nav-text">主题结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题修改"><span class="nav-text">主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布局"><span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-post-post-meta-pug"><span class="nav-text">_partial&#x2F;post&#x2F;post-meta.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-footer-pug"><span class="nav-text">_partial&#x2F;footer.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-layout-pug"><span class="nav-text">_partial&#x2F;layout.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-recent-posts-pug"><span class="nav-text">_partial&#x2F;recent-posts.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-sidebar-pug-需要重写全部内容"><span class="nav-text">_partial&#x2F;sidebar.pug 需要重写全部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#archive-pug"><span class="nav-text">archive.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#category-pug"><span class="nav-text">category.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gallery-pug"><span class="nav-text">gallery.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#page-pug"><span class="nav-text">page.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-pug"><span class="nav-text">tag.pug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-markdown-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-markdown.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-card-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-card.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-nav-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-nav.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-sidebar-sidebar-styl"><span class="nav-text">_components&#x2F;sidebar&#x2F;sidebar.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#compents-sidebar-site-overview-styl"><span class="nav-text">_compents&#x2F;sidebar&#x2F;site-overview.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-index-styl"><span class="nav-text">_global&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-page-styl"><span class="nav-text">_layout&#x2F;page.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-post-styl"><span class="nav-text">_layout&#x2F;post.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-search-index-styl"><span class="nav-text">_widget&#x2F;search&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-comment-styl"><span class="nav-text">_widget&#x2F;comment.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-notice-styl"><span class="nav-text">_widget&#x2F;notice.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-say-styl"><span class="nav-text">_widget&#x2F;say.styl</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-text">js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题新增功能"><span class="nav-text">主题新增功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#头像旋转功能"><span class="nav-text">头像旋转功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未使用的部分"><span class="nav-text">未使用的部分</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <a href="/about/"><img class="site-author-image" itemprop="image" alt="Leo.C"
+      src="https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/avatar.png"></a>
+  <p class="site-author-name" itemprop="name">Leo.C</p>
+    <div class="site-description" id="hitokoto">:D 获取中...</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto;
+      
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
+</script>
+
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/sitemap.xml" title="sitemap → &#x2F;sitemap.xml"><i class="fa fa-sitemap fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://www.baidu.com/" title="http:&#x2F;&#x2F;www.baidu.com&#x2F;" rel="noopener" target="_blank">baidu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://adachi.club/" title="http:&#x2F;&#x2F;adachi.club&#x2F;" rel="noopener" target="_blank">Adachi</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="http://blog.adachi.club/" title="http:&#x2F;&#x2F;blog.adachi.club&#x2F;">Blog</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
   <div class="reading-progress-bar"></div>
 
 
-    <main class="main">
       <div class="main-inner">
-        <div class="content-wrap">
-          
+        
 
-          <div class="content post posts-expand">
-            
+        <div class="content post posts-expand">
+          
 
     
   
@@ -496,8 +625,8 @@
 
 
 
-          </div>
-          
+        </div>
+        
     <div class="comments" id="valine-comments"></div>
 
 <script>
@@ -521,131 +650,6 @@
     });
   }
 </script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Contents
-        </li>
-        <li class="sidebar-nav-overview">
-          Overview
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#主题配置"><span class="nav-text">主题配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#升级"><span class="nav-text">升级</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#渲染器"><span class="nav-text">渲染器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类标签等系统插件"><span class="nav-text">分类标签等系统插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签云"><span class="nav-text">标签云</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索引擎"><span class="nav-text">搜索引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RSS"><span class="nav-text">RSS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码高亮"><span class="nav-text">代码高亮</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字数统计"><span class="nav-text">字数统计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#站点统计"><span class="nav-text">站点统计</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置原则"><span class="nav-text">配置原则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面头部"><span class="nav-text">页面头部</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文章"><span class="nav-text">文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分类"><span class="nav-text">分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#标签"><span class="nav-text">标签</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相册"><span class="nav-text">相册</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于"><span class="nav-text">关于</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关于站点"><span class="nav-text">关于站点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#404"><span class="nav-text">404</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#友情链接"><span class="nav-text">友情链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#女孩子们"><span class="nav-text">女孩子们</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题结构"><span class="nav-text">主题结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题修改"><span class="nav-text">主题修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#布局"><span class="nav-text">布局</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-post-post-meta-pug"><span class="nav-text">_partial&#x2F;post&#x2F;post-meta.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-footer-pug"><span class="nav-text">_partial&#x2F;footer.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-layout-pug"><span class="nav-text">_partial&#x2F;layout.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-recent-posts-pug"><span class="nav-text">_partial&#x2F;recent-posts.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#partial-sidebar-pug-需要重写全部内容"><span class="nav-text">_partial&#x2F;sidebar.pug 需要重写全部内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#archive-pug"><span class="nav-text">archive.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#category-pug"><span class="nav-text">category.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gallery-pug"><span class="nav-text">gallery.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#page-pug"><span class="nav-text">page.pug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#tag-pug"><span class="nav-text">tag.pug</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS"><span class="nav-text">CSS</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-markdown-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-markdown.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-card-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-card.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-post-post-nav-styl"><span class="nav-text">_components&#x2F;post&#x2F;post-nav.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#components-sidebar-sidebar-styl"><span class="nav-text">_components&#x2F;sidebar&#x2F;sidebar.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#compents-sidebar-site-overview-styl"><span class="nav-text">_compents&#x2F;sidebar&#x2F;site-overview.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#global-index-styl"><span class="nav-text">_global&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-page-styl"><span class="nav-text">_layout&#x2F;page.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#layout-post-styl"><span class="nav-text">_layout&#x2F;post.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-search-index-styl"><span class="nav-text">_widget&#x2F;search&#x2F;index.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-comment-styl"><span class="nav-text">_widget&#x2F;comment.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-notice-styl"><span class="nav-text">_widget&#x2F;notice.styl</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#widget-say-styl"><span class="nav-text">_widget&#x2F;say.styl</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#js"><span class="nav-text">js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主题新增功能"><span class="nav-text">主题新增功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#头像旋转功能"><span class="nav-text">头像旋转功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#未使用的部分"><span class="nav-text">未使用的部分</span></a></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <a href="/about/"><img class="site-author-image" itemprop="image" alt="Leo.C"
-      src="https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/avatar.png"></a>
-  <p class="site-author-name" itemprop="name">Leo.C</p>
-    <div class="site-description" id="hitokoto">:D 获取中...</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto;
-      
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
-
-</div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">13</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">categories</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">tags</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/yourname" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:yourname@gmail.com" title="E-Mail → mailto:yourname@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/yourname" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://plus.google.com/yourname" title="Google → https:&#x2F;&#x2F;plus.google.com&#x2F;yourname" rel="noopener" target="_blank"><i class="fab fa-google fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/sitemap.xml" title="sitemap → &#x2F;sitemap.xml"><i class="fa fa-sitemap fa-fw"></i></a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="/atom.xml" title="RSS → &#x2F;atom.xml"><i class="fa fa-rss fa-fw"></i></a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="http://www.baidu.com/" title="http:&#x2F;&#x2F;www.baidu.com&#x2F;" rel="noopener" target="_blank">baidu</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://adachi.club/" title="http:&#x2F;&#x2F;adachi.club&#x2F;" rel="noopener" target="_blank">Adachi</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="http://blog.adachi.club/" title="http:&#x2F;&#x2F;blog.adachi.club&#x2F;">Blog</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
 
       </div>
     </main>
@@ -725,9 +729,6 @@
 <script src="/js/motion.js"></script>
 
 
-<script src="/js/schemes/pisces.js"></script>
-
-
 <script src="/js/next-boot.js"></script>
 
   <script>
@@ -735,7 +736,7 @@ var pjax = new Pjax({
   selectors: [
     'head title',
     '#page-configurations',
-    '.content-wrap',
+    '.main-inner',
     '.post-toc-wrap',
     '.languages',
     '#pjax'
@@ -788,8 +789,6 @@ document.addEventListener('pjax:success', () => {
   NexT.utils.updateSidebarPosition();
 });
 </script>
-
-
 
 
   
