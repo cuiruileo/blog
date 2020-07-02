@@ -288,9 +288,10 @@ NexT.utils = {
   initSidebarDimension: function() {
     const sidebarNav = document.querySelector('.sidebar-nav');
     const sidebarb2t = document.querySelector('.sidebar-inner .back-to-top');
+    const sidebarNavHeight = sidebarNav ? sidebarNav.offsetHeight : 0;
     const sidebarb2tHeight = sidebarb2t ? sidebarb2t.offsetHeight : 0;
     const sidebarOffset = CONFIG.sidebar.offset || 12;
-    let sidebarSchemePadding = (CONFIG.sidebar.padding * 2) + sidebarNav.offsetHeight + sidebarb2tHeight;
+    let sidebarSchemePadding = (CONFIG.sidebar.padding * 2) + sidebarNavHeight + sidebarb2tHeight;
     if (CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') sidebarSchemePadding += sidebarOffset * 2;
     // Initialize Sidebar & TOC Height.
     const sidebarWrapperHeight = document.body.offsetHeight - sidebarSchemePadding + 'px';
@@ -298,20 +299,10 @@ NexT.utils = {
   },
 
   updateSidebarPosition: function() {
-    const sidebarNav = document.querySelector('.sidebar-nav');
-    const hasTOC = document.querySelector('.post-toc');
-    if (hasTOC) {
-      sidebarNav.style.display = '';
-      sidebarNav.classList.add('motion-element');
-      document.querySelector('.sidebar-nav-toc').click();
-    } else {
-      sidebarNav.style.display = 'none';
-      sidebarNav.classList.remove('motion-element');
-      document.querySelector('.sidebar-nav-overview').click();
-    }
     NexT.utils.initSidebarDimension();
     if (window.screen.width < 992 || CONFIG.scheme === 'Pisces' || CONFIG.scheme === 'Gemini') return;
     // Expand sidebar on post detail page by default, when post has a toc.
+    const hasTOC = document.querySelector('.post-toc');
     let display = CONFIG.page.sidebar;
     if (typeof display !== 'boolean') {
       // There's no definition sidebar in the page front-matter.

@@ -19,7 +19,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"8.0.0-rc.3","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false,"display":"post"},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"blog.adachi.club","root":"/","scheme":"Gemini","version":"8.0.0-rc.4","exturl":false,"sidebar":{"position":"right","padding":18,"offset":12,"onmobile":false,"display":"post"},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Highly educated in hardwarebut newbie to software">
@@ -57,30 +57,32 @@
   <style>
   body { margin-top: 2rem; }
 
-  .use-motion .brand,
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
   .use-motion .menu-item,
-  .sidebar-inner,
+  .use-motion .sidebar,
   .use-motion .post-block,
   .use-motion .pagination,
   .use-motion .comments,
   .use-motion .post-header,
   .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+  .use-motion .collection-header,
+  .use-motion .footer { opacity: initial; }
 
   .use-motion .site-title,
-  .use-motion .site-subtitle {
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
     opacity: initial;
     top: initial;
   }
 
-  .use-motion .logo-line-before, .use-motion .logo-line-after {
+  .use-motion .logo-line {
     transform: scaleX(1);
   }
 
   .search-pop-overlay, .sidebar-nav { display: none; }
   .sidebar-panel { display: block; }
   </style>
-  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
 
 <link rel="alternate" href="/atom.xml" title="Leo's Repository" type="application/atom+xml">
@@ -104,9 +106,9 @@
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <i class="logo-line-before"></i>
+      <i class="logo-line"></i>
       <h1 class="site-title">Leo's Repository</h1>
-      <i class="logo-line-after"></i>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">~ Recording daily growing up ~</p>
   </div>
@@ -173,7 +175,7 @@
 </div>
 <div id="search-result">
   <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -190,9 +192,9 @@
   </div>
 
   <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Contents
         </li>
@@ -202,16 +204,17 @@
       </ul>
 
       <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
+      <section class="post-toc-wrap sidebar-panel">
           <div class="post-sidebar-title">By Year</div>
           <div class="post-sidebar"><a class="year-link" href="/archives/2020/">2020<span class="year-count">4</span></a>&nbsp;<a class="year-link" href="/archives/2019/">2019<span class="year-count">7</span></a>&nbsp;<a class="year-link" href="/archives/2018/">2018<span class="year-count">2</span></a></div>
           <div class="post-sidebar-title" style="margin-top:10px;">By Month</div>
           <div class="post-sidebar"><ul class="month-list"><li class="month-list-item"><a class="month-list-link" href="/archives/2020/05/">May 2020</a><span class="month-list-count">2</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2020/04/">April 2020</a><span class="month-list-count">2</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2019/12/">December 2019</a><span class="month-list-count">3</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2019/06/">June 2019</a><span class="month-list-count">1</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2019/04/">April 2019</a><span class="month-list-count">1</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2019/01/">January 2019</a><span class="month-list-count">2</span></li><li class="month-list-item"><a class="month-list-link" href="/archives/2018/04/">April 2018</a><span class="month-list-count">2</span></li></ul></div>
           <div class="post-toc motion-element"><div class="count">13 posts in total</div></div>
-      </div>
+
+      </section>
       <!--/noindex-->
 
-      <div class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <a href="/about/"><img class="site-author-image" itemprop="image" alt="Leo.C"
       src="https://cdn.jsdelivr.net/gh/cuiruileo/cdn/blog/avatar.png"></a>
@@ -298,7 +301,7 @@
     </ul>
   </div>
 
-      </div>
+      </section>
         <div class="back-to-top motion-element">
           <i class="fa fa-arrow-up"></i>
           <span>0%</span>
@@ -312,6 +315,10 @@
 
       
   <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 
       <div class="main-inner">
@@ -538,9 +545,6 @@ var pjax = new Pjax({
     '.languages',
     '#pjax'
   ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
   analytics: false,
   cacheBust: false,
   scrollTo : !CONFIG.bookmark.enable
@@ -556,6 +560,13 @@ document.addEventListener('pjax:success', () => {
       .add(NexT.motion.middleWares.subMenu)
       .add(NexT.motion.middleWares.postList)
       .bootstrap();
+  }
+  const hasTOC = document.querySelector('.post-toc');
+  document.querySelector('.sidebar-inner').classList.toggle('sidebar-nav-active', hasTOC);
+  if (hasTOC) {
+    document.querySelector('.sidebar-nav-toc').click();
+  } else {
+    document.querySelector('.sidebar-nav-overview').click();
   }
   NexT.utils.updateSidebarPosition();
 });
